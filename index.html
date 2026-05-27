@@ -3,125 +3,197 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cybersecurity Portfolio</title>
+  <title>DaMya Davis | Cybersecurity Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
-      line-height: 1.6;
+    :root{
+      --bg:#0b1220;
+      --card:#111a2e;
+      --accent:#4f8cff;
+      --text:#e6edf7;
+      --muted:#a9b4c4;
+      --border:rgba(255,255,255,0.08);
     }
 
-    header {
-      background: #111827;
-      padding: 20px;
-      position: sticky;
-      top: 0;
+    *{
+      box-sizing:border-box;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 24px;
+    body{
+      margin:0;
+      font-family:Inter, Arial, sans-serif;
+      background:linear-gradient(180deg,#070b14,#0b1220);
+      color:var(--text);
     }
 
-    nav {
-      margin-top: 10px;
+    header{
+      position:sticky;
+      top:0;
+      background:rgba(10,16,30,0.85);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--border);
+      padding:16px 24px;
+      z-index:1000;
     }
 
-    nav a {
-      color: #60a5fa;
-      margin-right: 15px;
-      text-decoration: none;
+    .container{
+      max-width:1000px;
+      margin:auto;
+      padding:0 20px;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:10px;
     }
 
-    section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
+    .brand{
+      font-size:18px;
+      font-weight:700;
     }
 
-    .card {
-      background: #1f2937;
-      padding: 20px;
-      margin-top: 20px;
-      border-radius: 10px;
+    nav a{
+      color:var(--muted);
+      margin-left:15px;
+      text-decoration:none;
+      font-size:14px;
     }
 
-    .placeholder {
-      color: #fbbf24;
-      font-weight: bold;
+    nav a:hover{
+      color:var(--accent);
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #111827;
-      margin-top: 40px;
+    .hero{
+      padding:80px 20px 40px;
+      text-align:center;
+    }
+
+    .hero h1{
+      font-size:40px;
+      margin-bottom:10px;
+    }
+
+    .hero p{
+      color:var(--muted);
+      max-width:700px;
+      margin:auto;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:20px;
+      padding:10px 18px;
+      background:var(--accent);
+      color:white;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    section{
+      padding:40px 20px;
+    }
+
+    h2{
+      font-size:22px;
+      margin-bottom:15px;
+      border-left:4px solid var(--accent);
+      padding-left:10px;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      padding:20px;
+      border-radius:12px;
+      margin-top:15px;
+      transition:transform 0.2s ease;
+    }
+
+    .card:hover{
+      transform:translateY(-3px);
+    }
+
+    .placeholder{
+      color:#fbbf24;
+      font-weight:700;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:15px;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      color:var(--muted);
+      border-top:1px solid var(--border);
+      margin-top:40px;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Your Name - Cybersecurity Portfolio</h1>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About Me</a>
-    <a href="#projects">Projects</a>
-  </nav>
+  <div class="container topbar">
+    <div class="brand">DaMya Davis</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="mailto:damyadavis21@gmail.com">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<section id="home">
-  <h2>Professional Summary</h2>
-  <div class="card">
-    <p>
-      Aspiring cybersecurity professional with a strong interest in threat detection, risk management, and system protection. Passionate about learning how to secure systems and investigate security incidents.
-    </p>
-  </div>
-</section>
+<div id="home" class="hero">
+  <h1>Cybersecurity Portfolio</h1>
+  <p>Aspiring cybersecurity professional focused on threat detection, incident response, and securing modern systems through hands-on learning and real-world practice.</p>
+  <a class="btn" href="#projects">View Projects</a>
+</div>
 
-<section id="about">
+<section id="about" class="container">
   <h2>About Me</h2>
   <div class="card">
     <p>
-      I am currently building my skills in cybersecurity, focusing on understanding vulnerabilities, incident response, and ethical hacking fundamentals. I enjoy solving problems and learning how systems can be protected from real-world threats.
+      I am building my cybersecurity foundation with a strong interest in ethical hacking, vulnerability analysis, and incident response. My goal is to develop practical skills that help organizations protect their systems and respond to threats effectively.
     </p>
   </div>
 </section>
 
-<section id="projects">
+<section id="projects" class="container">
   <h2>Projects</h2>
 
-  <div class="card">
-    <h3>TryHackMe Journal</h3>
-    <p class="placeholder">Coming Soon</p>
-  </div>
+  <div class="grid">
 
-  <div class="card">
-    <h3>Incident Handler's Journal</h3>
-    <p class="placeholder">Coming Soon</p>
-  </div>
+    <div class="card">
+      <h3>TryHackMe Journal</h3>
+      <p class="placeholder">Coming Soon</p>
+    </div>
 
-  <div class="card">
-    <h3>Vulnerable System Analysis</h3>
-    <p class="placeholder">Coming Soon</p>
-  </div>
+    <div class="card">
+      <h3>Incident Handler's Journal</h3>
+      <p class="placeholder">Coming Soon</p>
+    </div>
 
-  <div class="card">
-    <h3>SQL Query</h3>
-    <p class="placeholder">Coming Soon</p>
+    <div class="card">
+      <h3>Vulnerable System Analysis</h3>
+      <p class="placeholder">Coming Soon</p>
+    </div>
+
+    <div class="card">
+      <h3>SQL Query</h3>
+      <p class="placeholder">Coming Soon</p>
+    </div>
+
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Your Name. Built for GitHub Pages.</p>
-</footer>
-
-</body>
-</html>
-
